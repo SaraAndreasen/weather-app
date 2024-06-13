@@ -1,0 +1,87 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(241, 239, 233);
+}
+.weather-app {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+header {
+  border-bottom: solid 1px;
+  border-color: rgb(245, 245, 245);
+  padding-bottom: 35px;
+}
+
+form input {
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+}
+
+form input#input-city {
+  background-color: rgb(245, 245, 245);
+  width: 75%;
+  padding: 22px;
+}
+
+form input#search-city-btn {
+  background-color: #885df1;
+  color: #fff;
+  margin-left: 5px;
+  padding: 20px;
+}
+form input#search-city-btn:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+.weather-information {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.weather-information {
+  margin-top: 20px;
+}
+div.weather-information h2 {
+  font-weight: 900;
+  margin: 0;
+  font-size: 38px;
+}
+
+div.weather-information p {
+  color: rgba(39, 33, 66, 0.4);
+}
+div.weather-information p strong {
+  color: #f65282;
+}
+
+.weather-emoji {
+  font-size: 40px;
+  position: relative;
+  top: 5px;
+}
+#current-temperature {
+  font-size: 68px;
+  font-weight: 900;
+}
+.celcius {
+  font-size: 20px;
+  position: relative;
+  top: -35px;
+}
+
+footer {
+  text-align: center;
+  color: rgba(39, 33, 66, 0.4);
+}
+
+footer a {
+  color: #885df1;
+}

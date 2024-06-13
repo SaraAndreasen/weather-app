@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes Plus WeatherApp</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="weather-app">
+      <header>
+        <form id="search-city-form">
+          <input
+            type="text"
+            name="city"
+            id="input-city"
+            placeholder="Enter city.."
+            required
+          />
+          <input type="submit" value="search" id="search-city-btn" />
+        </form>
+      </header>
+
+      <div class="weather-information">
+        <div>
+          <h2 id="city-name">San Fransisco</h2>
+          <p>
+            <span id="date">Friday 22:39</span>, few clouds
+            <br />
+            Humidity: <strong>48%</strong>, Wind: <strong>2.06km/h</strong>
+          </p>
+        </div>
+        <div class="temperature">
+          <span class="weather-emoji">⛅</span>
+          <span id="current-temperature">26</span>
+          <span class="celcius">°C</span>
+        </div>
+      </div>
+      <div class="weekly-overview">
+        <ul>
+          <li>
+            Mon ☀
+            <br />
+            14*C - 18*C
+          </li>
+          <li>
+            Tue ☀ <br />
+            14*C - 18*C
+          </li>
+          <li>
+            Wed ☀ <br />
+            14*C - 18*C
+          </li>
+          <li>
+            Thurs ☀ <br />
+            14*C - 18*C
+          </li>
+          <li>
+            Fri ☀ <br />
+            14*C - 18*C
+          </li>
+        </ul>
+      </div>
+      <footer>
+        This project was coded by
+        <a href="https://www.shecodes.io/graduates/127329-sara-andreasen"
+          >Sara Andreasen</a
+        >
+      </footer>
+    </div>
+    <script src="src/main.js"></script>
+  </body>
+</html>
