@@ -91,13 +91,5 @@ footer a {
 
 .footer-links {
   margin-top: 30px;
-}
-
-.footer-links ul {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  justify-content: space-around;
+  font-size: 12px;
 }
