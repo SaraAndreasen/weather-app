@@ -19,9 +19,6 @@ function displayCityAndTemp(response) {
   let currentLocalHumidity = response.data.temperature.humidity;
   let currentWindSpeed = response.data.wind.speed;
 
-  console.log(response.data.time);
-  console.log(response.data);
-
   weatherConditionsElement.innerHTML = `${weatherConditionsFromCity}`;
   currentTemperatureElement.innerHTML = `${currentTemp}`;
   cityName.innerHTML = `${cityFromResponse}`;
@@ -29,8 +26,6 @@ function displayCityAndTemp(response) {
   windElement.innerHTML = `${currentWindSpeed} km/h`;
   currentTimeElement.innerHTML = formatDate(date);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-emoji" />`;
-
-  console.log(response.data.time);
 }
 
 function formatDate(date) {
