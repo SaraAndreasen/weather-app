@@ -23,7 +23,7 @@ form input {
   border-radius: 5px;
 }
 
-form input#input-city {
+form input#search-input-city {
   background-color: rgb(245, 245, 245);
   width: 75%;
   padding: 22px;

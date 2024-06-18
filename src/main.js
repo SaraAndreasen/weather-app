@@ -25,7 +25,7 @@ function capitalizeCityName(city) {
     return char.toUpperCase();
   });
 }
-let cityInput = document.querySelector("#input-city");
+let cityInput = document.querySelector("#search-input-city");
 let cityName = document.querySelector("#city-name");
 let currentTempHeading = document.querySelector("#current-temperature");
 
@@ -37,13 +37,19 @@ function displayCityAndTemp(response) {
   cityName.innerHTML = `${cityFromResponse}`;
 }
 
-function searchCity(event) {
-  event.preventDefault();
-  let formattedCity = capitalizeCityName(cityInput.value.trim());
-  let weatherApi = `https://api.shecodes.io/weather/v1/current?query=${formattedCity}&key=${apiKey}&units=metric`;
+function searchCity(city) {
+  let weatherApi = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
   axios.get(weatherApi).then(displayCityAndTemp);
 }
 
+function handleSearchSubmit(event) {
+  event.preventDefault();
+
+  searchCity(cityInput.value);
+}
+
 let searchedCityForm = document.querySelector("#search-city-form");
-searchedCityForm.addEventListener("submit", searchCity);
+searchedCityForm.addEventListener("submit", handleSearchSubmit);
+
+searchCity("Copenhagen");
