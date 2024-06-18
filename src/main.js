@@ -10,6 +10,7 @@ function displayCityAndTemp(response) {
   let weatherConditionsElement = document.querySelector("#weather-conditions");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
 
   let currentTemp = Math.round(response.data.temperature.current);
   let cityFromResponse = response.data.city;
@@ -27,6 +28,7 @@ function displayCityAndTemp(response) {
   humidityElement.innerHTML = `${currentLocalHumidity}%`;
   windElement.innerHTML = `${currentWindSpeed} km/h`;
   currentTimeElement.innerHTML = formatDate(date);
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-emoji" />`;
 
   console.log(response.data.time);
 }

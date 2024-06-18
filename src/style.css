@@ -62,19 +62,21 @@ div.weather-information p strong {
   color: #f65282;
 }
 
+.temperature-container {
+  display: flex;
+}
 .weather-emoji {
-  font-size: 40px;
-  position: relative;
-  top: 5px;
+  width: 88px;
+  height: 88px;
 }
 #current-temperature {
-  font-size: 68px;
-  font-weight: 900;
+  font-size: 88px;
+  line-height: 88px;
+  font-weight: bold;
 }
 .celcius {
-  font-size: 20px;
-  position: relative;
-  top: -35px;
+  margin-top: 6px;
+  font-size: 28px;
 }
 
 footer {
