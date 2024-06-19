@@ -26,6 +26,8 @@ function displayCityAndTemp(response) {
   windElement.innerHTML = `${currentWindSpeed} km/h`;
   currentTimeElement.innerHTML = formatDate(date);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-emoji" />`;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -66,7 +68,14 @@ function handleSearchSubmit(event) {
   searchCity(cityInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log("test", response.data);
+
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -95,4 +104,3 @@ let searchedCityForm = document.querySelector("#search-city-form");
 searchedCityForm.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Copenhagen");
-displayForecast();
